@@ -17,7 +17,7 @@ dev.off()
 png("plots/scatter.png")
 plot(df$unemployment,
      df$Total_Thefts, 
-     main="unemployment vs Theft comparison",
+     main="Unemployment vs Theft Comparison",
      #sub="Is there a correlation between the amount of thefts and the unemployment rate across the United States between 1976 to 2014?",
      xlab="Unemployment Percentage",
      ylab="Total Thefts")
@@ -25,6 +25,5 @@ abline(lm(Total_Thefts ~ unemployment, data = df), col = "red")
 dev.off()
 
 #run test
-
 cor.test(df$Total_Thefts,df$unemployment, method = "pearson")
 
